@@ -1,78 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nekich.Игры - Переезд</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-<title>Flash Game</title>
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            border-top: 5px solid #4781b2;
+        }
 
-<script>
-window.RufflePlayer = window.RufflePlayer || {};
-window.RufflePlayer.config = {
-    autoplay: "on",
-    splashScreen: false,
-    unmuteOverlay: "hidden",
-    quality: "high",
-    letterbox: "on",
-    warnOnUnsupportedContent: false,
-    contextMenu: "off",
-    scale: "showAll",
-    forceScale: true
-};
-</script>
+        h1 {
+            margin-top: 0;
+            color: #444;
+            font-weight: normal;
+            font-size: 24px;
+        }
 
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
 
-<style>
-html,
-body{
-    margin:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#000;
-    touch-action:none;
-}
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-#game{
-    position:fixed;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+        /* Дизайн кнопки (стиль Windows 7 / Aero) */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to bottom, #7eb3d8 0%, #588fbc 49%, #4781b2 50%, #5890bf 100%);
+            border: 1px solid #43648a;
+            border-radius: 3px;
+            color: #ffffff;
+            font-family: Tahoma, Arial, sans-serif;
+            font-size: 16px;
+            padding: 12px 20px;
+            text-shadow: 1px 1px 1px #335980;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.1s;
+        }
 
-ruffle-player,
-embed,
-object{
-    width:100%!important;
-    height:100%!important;
-    display:block;
-    will-change:transform;
-}
-</style>
+        .btn:hover {
+            background: linear-gradient(to bottom, #8fbee0 0%, #689cc6 49%, #558dbd 50%, #689ec9 100%);
+        }
+
+        .btn:active {
+            background: linear-gradient(to bottom, #4781b2 0%, #588fbc 100%);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: none;
+        }
+        
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div id="game"></div>
-
-<script>
-window.addEventListener("load", () => {
-
-    const ruffle = window.RufflePlayer.newest();
-    const player = ruffle.createPlayer();
-
-    document.getElementById("game").appendChild(player);
-
-    player.style.width = "100%";
-    player.style.height = "100%";
-
-    player.load({
-        url: "377.swf"
-    });
-});
-</script>
+    <div class="container">
+        <div class="icon">🚀</div>
+        <h1>Игра переехала в Nekich.Игры</h1>
+        <p>Игра <b>Разбей свой ПК!</b> переехала в Nekich.Игры:</p>
+        
+        <div class="links-container">
+            <a href="https://openvk.org/app626" class="btn">OpenVK.org</a>
+            <a href="http://openvk.xyz/app626" class="btn">OpenVK.xyz</a>
+            <a href="https://nekxd.ru/flash" class="btn">Сайт</a>
+        </div>
+    </div>
 
 </body>
 </html>
